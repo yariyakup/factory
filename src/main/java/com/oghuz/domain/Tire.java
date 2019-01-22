@@ -2,11 +2,11 @@ package com.oghuz.domain;
 
 public abstract class Tire {
     private String tireType;
-    private Short tireWidth;
-    private Short aspectRatio;
-    private Short diameter;
+    private Float tireWidth;
+    private Float aspectRatio;
+    private Float diameter;
 
-    public Tire(String tireType, Short tireWidth, Short aspectRatio, Short diameter) {
+    public Tire(String tireType, Float tireWidth, Float aspectRatio, Float diameter) {
         this.tireType = tireType;
         this.tireWidth = tireWidth;
         this.aspectRatio = aspectRatio;
@@ -21,27 +21,27 @@ public abstract class Tire {
         this.tireType = tireType;
     }
 
-    public Short getTireWidth() {
+    public Float getTireWidth() {
         return tireWidth;
     }
 
-    public void setTireWidth(Short tireWidth) {
+    public void setTireWidth(Float tireWidth) {
         this.tireWidth = tireWidth;
     }
 
-    public Short getAspectRatio() {
+    public Float getAspectRatio() {
         return aspectRatio;
     }
 
-    public void setAspectRatio(Short aspectRatio) {
+    public void setAspectRatio(Float aspectRatio) {
         this.aspectRatio = aspectRatio;
     }
 
-    public Short getDiameter() {
+    public Float getDiameter() {
         return diameter;
     }
 
-    public void setDiameter(Short diameter) {
+    public void setDiameter(Float diameter) {
         this.diameter = diameter;
     }
 }
