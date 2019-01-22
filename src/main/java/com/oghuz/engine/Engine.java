@@ -7,11 +7,20 @@ public abstract class Engine {
     engineType type;
     Double fuelCapacity;
     Short cylinderCount;
+    String vinNumber;
 
-    public Engine(engineType type, Double fuelCapacity, Short cylinderCount) {
+    public Engine(engineType type, Double fuelCapacity, Short cylinderCount, String vinNumber) {
         this.type = type;
         this.fuelCapacity = fuelCapacity;
         this.cylinderCount = cylinderCount;
+        this.vinNumber = geneRateVinNumber();
+    }
+
+    String geneRateVinNumber(){
+        StringBuilder vinNumber = new StringBuilder(17);
+        /* TODO */
+
+        return vinNumber.toString();
     }
 
     public engineType getType() {
