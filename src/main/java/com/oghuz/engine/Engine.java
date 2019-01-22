@@ -5,10 +5,10 @@ enum engineType{
 }
 public abstract class Engine {
     engineType type;
-    Float fuelCapacity;
+    Double fuelCapacity;
     Short cylinderCount;
 
-    public Engine(engineType type, Float fuelCapacity, Short cylinderCount) {
+    public Engine(engineType type, Double fuelCapacity, Short cylinderCount) {
         this.type = type;
         this.fuelCapacity = fuelCapacity;
         this.cylinderCount = cylinderCount;
@@ -22,11 +22,11 @@ public abstract class Engine {
         this.type = type;
     }
 
-    public Float getFuelCapacity() {
+    public Double getFuelCapacity() {
         return fuelCapacity;
     }
 
-    public void setFuelCapacity(Float fuelCapacity) {
+    public void setFuelCapacity(Double fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
     }
 
