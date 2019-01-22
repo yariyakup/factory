@@ -1,19 +1,23 @@
 package com.oghuz.domain;
 
+// trnsmission types
+enum TransmissionType{
+    automatic, manuel, CVT;
+}
 public abstract class Transmission {
-    String type;
+    TransmissionType type;
     Short gearCount;
 
-    public Transmission(String type, Short gearCount) {
+    public Transmission(TransmissionType type, Short gearCount) {
         this.type = type;
         this.gearCount = gearCount;
     }
 
-    public String getType() {
+    public TransmissionType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(TransmissionType type) {
         this.type = type;
     }
 
