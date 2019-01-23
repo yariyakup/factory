@@ -6,7 +6,7 @@ public class V8Engine extends Engine {
         type = engineType.vType;
         fuelCapacity = 6.2;
         cylinderCount = 8;
-        vinNumber = geneRateVinNumber();
+        vinNumber = generateVinNumber();
     }
 
 }

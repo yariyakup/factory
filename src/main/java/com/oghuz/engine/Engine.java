@@ -1,5 +1,7 @@
 package com.oghuz.engine;
 
+import java.util.Random;
+
 enum engineType{
     straight, vType, boxer, rotary, diesel, electric, hybrid;
 }
@@ -13,13 +15,18 @@ public abstract class Engine {
         this.type = type;
         this.fuelCapacity = fuelCapacity;
         this.cylinderCount = cylinderCount;
-        this.vinNumber = geneRateVinNumber();
+        this.vinNumber = generateVinNumber();
     }
 
-    String geneRateVinNumber(){
+    String generateVinNumber(){
         StringBuilder vinNumber = new StringBuilder(17);
-        /* TODO */
-
+        String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Random random = new Random();
+        int first3Digit = random.nextInt(900) + 100;
+        vinNumber.append(first3Digit);
+        for (int i = 0; i < 14; i++) {
+            vinNumber.append(alphabetString.charAt(1 + random.nextInt(25)));
+        }
         return vinNumber.toString();
     }
 
