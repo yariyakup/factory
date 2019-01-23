@@ -10,6 +10,8 @@ public abstract class Engine {
     Double fuelCapacity;
     Short cylinderCount;
     String vinNumber;
+    final String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 
     public Engine(engineType type, Double fuelCapacity, Short cylinderCount, String vinNumber) {
         this.type = type;
@@ -20,7 +22,7 @@ public abstract class Engine {
 
     String generateVinNumber(){
         StringBuilder vinNumber = new StringBuilder(17);
-        String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        //String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Random random = new Random();
         int first3Digit = random.nextInt(900) + 100;
         vinNumber.append(Math.abs(first3Digit));
@@ -28,6 +30,22 @@ public abstract class Engine {
             vinNumber.append(alphabetString.charAt(1 + random.nextInt(25)));
         }
         return vinNumber.toString();
+    }
+
+    public String engineNumber(){
+        Random random = new Random();
+        StringBuilder engineNum = new StringBuilder();
+        //String alphabeString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        engineNum.append(alphabetString.charAt(1 + random.nextInt(25)));
+        engineNum.append(alphabetString.charAt(1 + random.nextInt(25)));
+        int fiveDigits = random.nextInt(90000) + 10000;
+        engineNum.append(Math.abs(fiveDigits));
+        engineNum.append(alphabetString.charAt(1 + random.nextInt(25)));
+        int  sevenDigits = random.nextInt(9000000) + 1000000;
+        engineNum.append(Math.abs(sevenDigits));
+        engineNum.append(alphabetString.charAt(1 + random.nextInt(25)));
+
+        return engineNum.toString();
     }
 
     public engineType getType() {
