@@ -23,7 +23,7 @@ public abstract class Engine {
         String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Random random = new Random();
         int first3Digit = random.nextInt(900) + 100;
-        vinNumber.append(first3Digit);
+        vinNumber.append(Math.abs(first3Digit));
         for (int i = 0; i < 14; i++) {
             vinNumber.append(alphabetString.charAt(1 + random.nextInt(25)));
         }
