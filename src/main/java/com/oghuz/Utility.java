@@ -15,21 +15,26 @@ public class Utility {
     }
 
     public String vinNumber(){
-        StringBuilder vinNumber = new StringBuilder(17);
-        //String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder vinNum = new StringBuilder(17);
         Random random = new Random();
-        int first3Digit = random.nextInt(900) + 100;
-        vinNumber.append(Math.abs(first3Digit));
-        for (int i = 0; i < 14; i++) {
-            vinNumber.append(alphabetString.charAt(1 + random.nextInt(25)));
+        int firstDigit = random.nextInt(9) + 1;
+        vinNum.append(Math.abs(firstDigit));
+        for (int i = 0; i < 4; i++) {
+            vinNum.append(alphabetString.charAt(1 + random.nextInt(25)));
         }
-        return vinNumber.toString();
+        int twoDigits = random.nextInt(90) + 10;
+        vinNum.append(Math.abs(twoDigits));
+        for (int i = 0; i < 4; i++) {
+            vinNum.append(alphabetString.charAt(1 + random.nextInt(25)));
+        }
+        int sixDigits = random.nextInt(900000) + 100000;
+        vinNum.append(Math.abs(sixDigits));
+        return vinNum.toString();
     }
 
     public String engineNumber(){
         Random random = new Random();
         StringBuilder engineNum = new StringBuilder();
-        //String alphabeString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         engineNum.append(alphabetString.charAt(1 + random.nextInt(25)));
         engineNum.append(alphabetString.charAt(1 + random.nextInt(25)));
         int fiveDigits = random.nextInt(90000) + 10000;
