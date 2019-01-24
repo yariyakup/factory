@@ -1,23 +1,22 @@
 package com.oghuz.domain;
 
-// trnsmission types
-enum TransmissionType{
-    automatic, manuel, CVT;
-}
+
+import com.oghuz.Constants;
+
 public abstract class Transmission {
-    TransmissionType type;
+    Constants.TransmissionType type;
     Short gearCount;
 
-    public Transmission(TransmissionType type, Short gearCount) {
+    public Transmission(Constants.TransmissionType type, Short gearCount) {
         this.type = type;
         this.gearCount = gearCount;
     }
 
-    public TransmissionType getType() {
+    public Constants.TransmissionType getType() {
         return type;
     }
 
-    public void setType(TransmissionType type) {
+    public void setType(Constants.TransmissionType type) {
         this.type = type;
     }
 

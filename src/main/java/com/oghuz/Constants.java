@@ -11,6 +11,11 @@ public class Constants {
         twoDoorCoupe, fourDoorCoupe, twoDoorTruck, fourDoorTruck, SUV;
     }
 
+    // trnsmission types
+    public enum TransmissionType{
+        automatic, manuel, CVT;
+    }
+
     private static Constants getInstance;
     private Constants() {}
     public static synchronized Constants Constants(){

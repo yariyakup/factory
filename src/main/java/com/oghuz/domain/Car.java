@@ -8,12 +8,16 @@ public abstract class Car {
     public String year;
     public Constants.VehicleType vihecleType;
     public Engine engine;
+    public String vinNumber;
+    public Tire tire;
 
-    public Car(String model, String year, Constants.VehicleType vihecleType, Engine engine) {
+    public Car(String model, String year, Constants.VehicleType vihecleType, Engine engine, String vinNumber, Tire tire) {
         this.model = model;
         this.year = year;
         this.vihecleType = vihecleType;
         this.engine = engine;
+        this.vinNumber = vinNumber;
+        this.tire = tire;
     }
 
     public String getModel() {
@@ -46,5 +50,21 @@ public abstract class Car {
 
     public void setEngine(Engine engine) {
         this.engine = engine;
+    }
+
+    public String getVinNumber() {
+        return vinNumber;
+    }
+
+    public void setVinNumber(String vinNumber) {
+        this.vinNumber = vinNumber;
+    }
+
+    public Tire getTire() {
+        return tire;
+    }
+
+    public void setTire(Tire tire) {
+        this.tire = tire;
     }
 }
