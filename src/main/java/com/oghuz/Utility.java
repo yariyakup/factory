@@ -5,13 +5,13 @@ import java.util.Random;
 public class Utility {
 
     final String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private static Utility getInstance;
+    private static Utility instance;
     private Utility() {}
     public static synchronized Utility instance(){
-        if (getInstance == null){
-            getInstance = new Utility();
+        if (instance == null){
+            instance = new Utility();
         }
-        return getInstance;
+        return instance;
     }
 
     public String vinNumber(){
