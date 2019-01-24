@@ -16,12 +16,12 @@ public class Constants {
         automatic, manuel, CVT;
     }
 
-    private static Constants getInstance;
+    private static Constants instance;
     private Constants() {}
     public static synchronized Constants Constants(){
-        if (getInstance == null){
-            getInstance = new Constants();
+        if (instance == null){
+            instance = new Constants();
         }
-        return getInstance;
+        return instance;
     }
 }
