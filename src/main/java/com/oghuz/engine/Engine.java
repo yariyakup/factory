@@ -15,6 +15,29 @@ public abstract class Engine {
         this.cylinderCount = cylinderCount;
         this.engineNumver = engineNumver;
     }
+    public boolean isEngineRunning = false;
+
+    public boolean startEngine() {
+        if (isEngineRunning){
+            System.out.println("the Engine is already at running");
+            return false;
+        }else {
+            System.out.println("Engine is starting now with fuel consumption of : " + fuelCapacity);
+            isEngineRunning = true;
+            return true;
+        }
+    }
+
+    public boolean stopEngine(){
+        if (isEngineRunning){
+            System.out.println("Engine is stopping now");
+            isEngineRunning = false;
+            return true;
+        }else {
+            System.out.println("Engine is already at stop");
+            return false;
+        }
+    }
 
     public Constants.EngineType getType() {
         return type;
