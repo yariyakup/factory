@@ -1,28 +1,25 @@
 package com.oghuz.engine;
 
-import com.oghuz.Utility;
+import com.oghuz.Constants;
 
-enum engineType{
-    straight, vType, boxer, rotary, diesel, electric, hybrid;
-}
 public abstract class Engine {
-    engineType type;
+    Constants.EngineType type;
     Double fuelCapacity;
     Short cylinderCount;
     String vinNumber;
 
-    public Engine(engineType type, Double fuelCapacity, Short cylinderCount, String vinNumber) {
+    public Engine(Constants.EngineType type, Double fuelCapacity, Short cylinderCount, String vinNumber) {
         this.type = type;
         this.fuelCapacity = fuelCapacity;
         this.cylinderCount = cylinderCount;
-        this.vinNumber = Utility.instance().vinNumber();
+        this.vinNumber = vinNumber;
     }
 
-    public engineType getType() {
+    public Constants.EngineType getType() {
         return type;
     }
 
-    public void setType(engineType type) {
+    public void setType(Constants.EngineType type) {
         this.type = type;
     }
 
@@ -40,5 +37,13 @@ public abstract class Engine {
 
     public void setCylinderCount(Short cylinderCount) {
         this.cylinderCount = cylinderCount;
+    }
+
+    public String getVinNumber() {
+        return vinNumber;
+    }
+
+    public void setVinNumber(String vinNumber) {
+        this.vinNumber = vinNumber;
     }
 }

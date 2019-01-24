@@ -1,17 +1,15 @@
 package com.oghuz.domain;
 
+import com.oghuz.Constants;
 import com.oghuz.engine.Engine;
-// vehicle type
-enum VehicleType{
-    twoDoorCoupe, fourDoorCoupe, twoDoorTruck, fourDoorTruck, SUV;
-}
+
 public abstract class Car {
     public String model;
     public String year;
-    public VehicleType vihecleType;
+    public Constants.VehicleType vihecleType;
     public Engine engine;
 
-    public Car(String model, String year, VehicleType vihecleType, Engine engine) {
+    public Car(String model, String year, Constants.VehicleType vihecleType, Engine engine) {
         this.model = model;
         this.year = year;
         this.vihecleType = vihecleType;
@@ -30,11 +28,11 @@ public abstract class Car {
         return year;
     }
 
-    public VehicleType getVihecleType() {
+    public Constants.VehicleType getVihecleType() {
         return vihecleType;
     }
 
-    public void setVihecleType(VehicleType vihecleType) {
+    public void setVihecleType(Constants.VehicleType vihecleType) {
         this.vihecleType = vihecleType;
     }
 
