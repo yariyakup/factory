@@ -1,6 +1,17 @@
 package com.oghuz;
 
 public class Constants {
+
+    // singleton object
+    private static Constants instance;
+    private Constants() {}
+    public static synchronized Constants Constants(){
+        if (instance == null){
+            instance = new Constants();
+        }
+        return instance;
+    }
+
     // engine types
     public enum EngineType{
         straight, vType, boxer, rotary, diesel, electric, hybrid;
@@ -16,12 +27,5 @@ public class Constants {
         automatic, manuel, CVT;
     }
 
-    private static Constants instance;
-    private Constants() {}
-    public static synchronized Constants Constants(){
-        if (instance == null){
-            instance = new Constants();
-        }
-        return instance;
-    }
+
 }
