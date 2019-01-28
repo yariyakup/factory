@@ -43,10 +43,6 @@ public abstract class Engine {
         return type;
     }
 
-    public void setType(Constants.EngineType type) {
-        this.type = type;
-    }
-
     public Double getFuelCapacity() {
         return fuelCapacity;
     }
@@ -57,10 +53,6 @@ public abstract class Engine {
 
     public Short getCylinderCount() {
         return cylinderCount;
-    }
-
-    public void setCylinderCount(Short cylinderCount) {
-        this.cylinderCount = cylinderCount;
     }
 
     public String getEngineNumver() {
