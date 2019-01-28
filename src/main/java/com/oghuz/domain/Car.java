@@ -4,14 +4,14 @@ import com.oghuz.Constants;
 import com.oghuz.engine.Engine;
 
 public abstract class Car {
-    public String model;
-    public String year;
-    public Constants.VehicleType vihecleType;
-    public Engine engine;
-    public String vinNumber;
-    public Tire tire;
+    private String model;
+    private String year;
+    private Constants.VehicleType vihecleType;
+    private Engine engine;
+    private String vinNumber;
+    private Tire tire;
 
-    public Car(String model, String year, Constants.VehicleType vihecleType, Engine engine, String vinNumber, Tire tire) {
+     Car(String model, String year, Constants.VehicleType vihecleType, Engine engine, String vinNumber, Tire tire) {
         this.model = model;
         this.year = year;
         this.vihecleType = vihecleType;

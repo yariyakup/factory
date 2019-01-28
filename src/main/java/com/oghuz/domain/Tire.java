@@ -6,7 +6,7 @@ public abstract class Tire {
     private Float aspectRatio;
     private Float diameter;
 
-    public Tire(String tireType, Float tireWidth, Float aspectRatio, Float diameter) {
+     Tire(String tireType, Float tireWidth, Float aspectRatio, Float diameter) {
         this.tireType = tireType;
         this.tireWidth = tireWidth;
         this.aspectRatio = aspectRatio;

@@ -3,13 +3,13 @@ package com.oghuz.engine;
 import com.oghuz.Constants;
 
 public abstract class Engine {
-    Constants.EngineType type;
-    Double fuelCapacity;
-    Short cylinderCount;
-    String engineNumver;
+    private Constants.EngineType type;
+    private Double fuelCapacity;
+    private Short cylinderCount;
+    private String engineNumver;
 
 
-    public Engine(Constants.EngineType type, Double fuelCapacity, Short cylinderCount, String engineNumver) {
+    Engine(Constants.EngineType type, Double fuelCapacity, Short cylinderCount, String engineNumver) {
         this.type = type;
         this.fuelCapacity = fuelCapacity;
         this.cylinderCount = cylinderCount;

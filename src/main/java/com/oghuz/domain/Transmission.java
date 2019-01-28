@@ -7,7 +7,7 @@ public abstract class Transmission {
     Constants.TransmissionType type;
     Short gearCount;
 
-    public Transmission(Constants.TransmissionType type, Short gearCount) {
+    Transmission(Constants.TransmissionType type, Short gearCount) {
         this.type = type;
         this.gearCount = gearCount;
     }
