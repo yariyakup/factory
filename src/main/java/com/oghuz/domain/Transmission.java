@@ -16,15 +16,8 @@ public abstract class Transmission {
         return type;
     }
 
-    public void setType(Constants.TransmissionType type) {
-        this.type = type;
-    }
-
     public Short getGearCount() {
         return gearCount;
     }
 
-    public void setGearCount(Short gearCount) {
-        this.gearCount = gearCount;
-    }
 }
