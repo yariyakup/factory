@@ -6,14 +6,14 @@ public abstract class Engine {
     private Constants.EngineType type;
     private Double fuelCapacity;
     private Short cylinderCount;
-    private String engineNumver;
+    private String engineNumber;
 
 
-    Engine(Constants.EngineType type, Double fuelCapacity, Short cylinderCount, String engineNumver) {
+    Engine(Constants.EngineType type, Double fuelCapacity, Short cylinderCount, String engineNumber) {
         this.type = type;
         this.fuelCapacity = fuelCapacity;
         this.cylinderCount = cylinderCount;
-        this.engineNumver = engineNumver;
+        this.engineNumber = engineNumber;
     }
     protected boolean isEngineRunning = false;
 
@@ -56,10 +56,10 @@ public abstract class Engine {
     }
 
     public String getEngineNumver() {
-        return engineNumver;
+        return engineNumber;
     }
 
     public void setEngineNumver(String vinNumber) {
-        this.engineNumver = vinNumber;
+        this.engineNumber = vinNumber;
     }
 }

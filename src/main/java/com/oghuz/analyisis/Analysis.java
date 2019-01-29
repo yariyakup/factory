@@ -1,6 +1,6 @@
 package com.oghuz.analyisis;
 
-import com.oghuz.domain.Car;
+import com.oghuz.Car.Car;
 
 import java.util.List;
 

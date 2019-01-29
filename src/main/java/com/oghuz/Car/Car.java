@@ -1,6 +1,8 @@
-package com.oghuz.domain;
+package com.oghuz.Car;
 
 import com.oghuz.Constants;
+import com.oghuz.Tire.Tire;
+import com.oghuz.Transmission.Transmission;
 import com.oghuz.engine.Engine;
 
 public abstract class Car {

@@ -1,4 +1,4 @@
-package com.oghuz.domain;
+package com.oghuz.Tire;
 
 public abstract class Tire {
     private String tireType;

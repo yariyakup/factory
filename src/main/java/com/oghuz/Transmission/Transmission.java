@@ -1,11 +1,11 @@
-package com.oghuz.domain;
+package com.oghuz.Transmission;
 
 
 import com.oghuz.Constants;
 
 public abstract class Transmission {
-    Constants.TransmissionType type;
-    Short gearCount;
+    private Constants.TransmissionType type;
+    private Short gearCount;
 
     Transmission(Constants.TransmissionType type, Short gearCount) {
         this.type = type;
