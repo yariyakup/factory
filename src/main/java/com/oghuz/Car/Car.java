@@ -8,16 +8,16 @@ import com.oghuz.engine.Engine;
 public abstract class Car {
     private String model;
     private String year;
-    private Constants.VehicleType vihecleType;
+    private Constants.VehicleType vehicleType;
     private Engine engine;
     private String vinNumber;
     private Tire tire;
     private Transmission transmission;
 
-     Car(String model, String year, Constants.VehicleType vihecleType, Engine engine, String vinNumber, Tire tire, Transmission transmission) {
+     Car(String model, String year, Constants.VehicleType vehicleType, Engine engine, String vinNumber, Tire tire, Transmission transmission) {
         this.model = model;
         this.year = year;
-        this.vihecleType = vihecleType;
+        this.vehicleType = vehicleType;
         this.engine = engine;
         this.vinNumber = vinNumber;
         this.tire = tire;
@@ -37,11 +37,11 @@ public abstract class Car {
     }
 
     public Constants.VehicleType getVihecleType() {
-        return vihecleType;
+        return vehicleType;
     }
 
     public void setVihecleType(Constants.VehicleType vihecleType) {
-        this.vihecleType = vihecleType;
+        this.vehicleType = vihecleType;
     }
 
     public void setYear(String year) {
